@@ -2,6 +2,7 @@
   "name": "insight-artitico",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,7 +10,8 @@
     "lint": "eslint .",
     "test": "vitest run --coverage",
     "test:watch": "vitest",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "ingest": "ts-node scripts/ingest-spotify.ts"
   },
   "dependencies": {
     "@sentry/nextjs": "^10.42.0",
@@ -32,6 +34,7 @@
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
     "typescript": "^5",
-    "vitest": "^4.0.18"
+    "vitest": "^4.0.18",
+    "ts-node": "^10"
   }
 }

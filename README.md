@@ -41,6 +41,29 @@ npm install
 - `STRIPE_PRO_PRICE_ID`
 - `INGEST_CRON_SECRET`
 - `NEXT_PUBLIC_APP_URL`
+- **optionally** for manual ingestion:
+  - `SPOTIFY_CLIENT_ID` and `SPOTIFY_CLIENT_SECRET` (or provide `SPOTIFY_TOKEN`)
+
+3. Apply SQL migration:
+   - `supabase/migrations/0001_release1_foundation.sql`
+
+4. Run app:
+
+```bash
+npm run dev
+```
+
+5. Manual ingestion example (after setting Spotify credentials):
+
+```bash
+npm run ingest -- 1vCWHaC5f2uS3yhpwWbIA6
+```
+
+6. If testing Stripe webhook locally, use Stripe CLI:
+
+```bash
+stripe listen --forward-to localhost:3000/api/stripe/webhook
+```
 
 3. Apply SQL migration:
 - `supabase/migrations/0001_release1_foundation.sql`
