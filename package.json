@@ -11,7 +11,7 @@
     "test": "vitest run --coverage",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
-    "ingest": "ts-node scripts/ingest-spotify.ts"
+    "ingest": "ts-node scripts/ingest.ts"
   },
   "dependencies": {
     "@sentry/nextjs": "^10.42.0",
